@@ -88,56 +88,84 @@ The element will be visually hidden but will still be read by screen reader tech
 
 /* Reusable Custom CSS Variables */
 :root {
-  --colorTitle: hsl(234, 12%, 34%);   /* Very Dark Blue */
-  --colorText: hsl(229, 6%, 66%);     /* Grayish Blue */
-  --colorBackground: hsl(0, 0%, 98%); /* Very Light Gray */
+  --color-mainBg: hsl(217, 54%, 11%);
+  --color-cardBg: hsl(216, 50%, 16%);
+  --color-cardLine: hsl(215, 32%, 27%);
+  --color-text: hsl(215, 51%, 70%); /* Soft blue */
+  --color-ethLogo: hsl(178, 100%, 50%);
 }
 
 /* Divs & Containers */
 
 body {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: hsl(217, 54%, 11%);
-    color: hsl(0, 0%, 100%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Outfit', sans-serif;
+  background-color: hsl(217, 54%, 11%);
+  color: hsl(0, 0%, 100%);
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    background-color: hsl(216, 50%, 16%);
-    border: 1px solid red;
-    border-radius: 25px;
-    align-items: center;
-    justify-items: center;
-    padding: 20px;
-    width: 320px;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(216, 50%, 16%);
+  border: 1px solid red;
+  border-radius: 25px;
+  align-items: center;
+  justify-items: center;
+  padding: 20px;
+  width: 320px;
 
 }
 
 .image-wrapper { 
-    display: flex;
-    justify-self: center;  
+  display: flex;
+  justify-self: center;  
 }
 
 .image-wrapper__main-img {
-  display: block;
-  border-radius: 25px; /* calculate this border radius to suit card-wrapper border radius */
-  width: 300px;
-  margin: 0 auto;   
+display: block;
+border-radius: 25px; /* calculate this border radius to suit card-wrapper border radius */
+width: 300px;
+margin: 0 auto;   
 }
 
-.card__title {
+/* Typography */
 
+.card__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0.85rem 0 0.85rem 0;
 }
 
 .card__description {
-
+  margin-bottom: 0.85rem;
+  color: var(--color-text);
 }
 
-.card__price-date {
-  
+.price {
+  color: var(--color-ethLogo);
+  font-weight: 600;
+}
+
+.date {
+  color: var(--color-text);
+}
+
+.icon {
+  display: inline;
+  margin-right: 5px;
+}
+
+.dividing-line {
+  width: 100%;
+  border: 1px solid var(--color-cardLine);
+  margin: 0.8rem 0;
+}
+
+.creator-info span {
+  color: var(--color-text);
+  margin-right: 3px;
 }
