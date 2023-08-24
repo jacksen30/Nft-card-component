@@ -105,24 +105,39 @@ body {
     color: hsl(0, 0%, 100%);
 }
 
-.card-wrapper {
+.card {
+    display: flex;
+    flex-direction: column;
     background-color: hsl(216, 50%, 16%);
     border: 1px solid red;
+    border-radius: 25px;
     align-items: center;
     justify-items: center;
-    padding: 15px;
+    padding: 20px;
+    width: 320px;
 
 }
 
 .image-wrapper { 
     display: flex;
-    width: 100%;
-    height: auto;
-    justify-self: center;
-    
-    
+    justify-self: center;  
 }
 
-img {
-   height: 300px; 
+.image-wrapper__main-img {
+  display: block;
+  border-radius: 25px; /* calculate this border radius to suit card-wrapper border radius */
+  width: 300px;
+  margin: 0 auto;   
+}
+
+.card__title {
+
+}
+
+.card__description {
+
+}
+
+.card__price-date {
+  
 }
