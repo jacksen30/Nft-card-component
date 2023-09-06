@@ -165,7 +165,21 @@ margin: 0 auto;
   margin: 0.8rem 0;
 }
 
-.creator-info span {
+.creator-info__prefix {
   color: var(--color-text);
   margin-right: 3px;
 }
+
+/* Hover Rules - make applicable to desktop only*/
+.image-wrapper__main-img:hover {
+  cursor: pointer;
+}
+
+.creator-info__name:hover {
+  cursor: pointer;
+}
+
+.card__title:hover {
+  cursor: pointer;
+}
+
