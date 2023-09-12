@@ -93,6 +93,7 @@ The element will be visually hidden but will still be read by screen reader tech
   --color-cardLine: hsl(215, 32%, 27%);
   --color-text: hsl(215, 51%, 70%); /* Soft blue */
   --color-ethLogo: hsl(178, 100%, 50%);
+  --color-hover: hsl(178, 100%, 50%);
 }
 
 /* Divs & Containers */
@@ -111,7 +112,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: hsl(216, 50%, 16%);
-  border: 1px solid red;
+  /* border: 1px solid red; */
   border-radius: 25px;
   align-items: center;
   justify-items: center;
@@ -120,17 +121,32 @@ body {
 
 }
 
-.image-wrapper { 
+.card__image-wrapper { 
   display: flex;
-  justify-self: center;  
+  justify-self: center;
+  position: relative;  
 }
 
-.image-wrapper__main-img {
+.card__image-wrapper__image {
 display: block;
 border-radius: 25px; /* calculate this border radius to suit card-wrapper border radius */
 width: 300px;
 margin: 0 auto;   
 }
+
+.card__image-wrapper__overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* 0 makes it fully opaqe will use hover state to update */
+  border-radius: 25px; /* Esure this is the same as .image-wrapper__main-img potentially store it as a css variable */
+}
+
+
 
 /* Typography */
 
@@ -170,16 +186,19 @@ margin: 0 auto;
   margin-right: 3px;
 }
 
-/* Hover Rules - make applicable to desktop only*/
-.image-wrapper__main-img:hover {
+/* Hover Rules - make applicable to desktop only -- add color changes ect also*/
+
+
+.card__image-wrapper:hover .card__image-wrapper__overlay {
+  opacity: 1; /* allows the view icon to be full opacity */
+  background-color: hsla(178, 100%, 50%, 0.4); /* use a hsla to add opacity to the background color only */
   cursor: pointer;
 }
 
+.card__title:hover,
 .creator-info__name:hover {
   cursor: pointer;
+  color: var(--color-hover);
 }
 
-.card__title:hover {
-  cursor: pointer;
-}
 
