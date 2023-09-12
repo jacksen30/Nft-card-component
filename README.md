@@ -2,14 +2,12 @@
 
 This is my personal solution to the [NFT preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U). Frontend Mentor challenges help you improve your coding skills by building realistic projects, they provide you with a jpg of what the design or component should look like at each viewport width and then you write the code to make the design a functional website.  
 
-## Heres are a few features of my website / component
+## Project Overview and Reflections
 
-* Mobile first design as to be inline with Googles mobile first indexing best practices in relation to SEO.
-* The page is made responsive, with CSS flex and a breakpoint for viewports over 1000px wide, but more could be added in the future.
-* CSS variables added for colors that are re-used on multiple elements, this way the color scheme can be changed easily.
-* Rems are used as the prefered unit of measure. 
-* I wrote Javascript functions to handle custom form validation of the users input into the email field,
-the function works on input and toggles on the related error css classes until the user correctly enters a valid email syntax.
+Embarking on this project presented both challenges and opportunities. At a glance, it seemed straightforward, yet the requirements around the main image's active/hover state unfolded into an intriguing puzzle. One of the highlights of this project was the chance to revisit and hone my knowledge of CSS positioning. Specifically, I employed 'position: relative' for the image and 'position: absolute' for the overlay, ensuring they interacted precisely as intended.
+
+The core challenge lay in creating an opaque overlay without concurrently diminishing the overlay icon's opacity. My solution entailed setting the overlay opacity to zero, adjusting it to full opacity during hover. This approach ensured maximum visibility for the view/eye icon. Additionally, by using hsla for the overlay's background color during hover, I could achieve a 0.4 opacity, perfectly mirroring the design files. This was a wonderful refresher of foundational CSS concepts, that I often hadn't required in my projects recently.
+
 
 ## Table of contents
 
@@ -35,8 +33,7 @@ the function works on input and toggles on the related error css classes until t
 
 - Semantic HTML5 markup
 - CSS 3
-- CSS FLEX layout for contents of the landing page
-- Javascript ES6 
+- CSS FLEX layout 
 
 ## Author
 
